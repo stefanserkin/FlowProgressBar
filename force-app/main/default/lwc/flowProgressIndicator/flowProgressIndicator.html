@@ -1,7 +1,17 @@
 <template>
-    <lightning-progress-indicator current-step={currentStage} type="path" variant="base">
-        <template for:each={activeStages} for:item="stage">
-            <lightning-progress-step label={stage} value={stage} key={stage}></lightning-progress-step>
-        </template>
-    </lightning-progress-indicator>
+    <div class="slds-p-vertical_small">
+        <lightning-progress-indicator 
+            current-step={currentStage} 
+            type="path" 
+            variant="base"
+        >
+            <template for:each={activeStages} for:item="stage">
+                <lightning-progress-step 
+                    label={stage} 
+                    value={stage} 
+                    key={stage}
+                ></lightning-progress-step>
+            </template>
+        </lightning-progress-indicator>
+    </div>
 </template>
